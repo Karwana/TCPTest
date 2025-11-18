@@ -7,6 +7,7 @@ import java.net.Socket;
 public class Client {
 
     int port = 33333;
+
     public Client() throws IOException {
 
         Socket socket = new Socket("127.0.0.1", 33333);
@@ -20,5 +21,6 @@ public class Client {
             System.out.println("sent message: " + temp);
         }
     }
+
     void main() {}
 }

@@ -7,6 +7,7 @@ import java.net.Socket;
 public class Server {
 
     int port = 33333;
+
     public Server() throws IOException {
 
         ServerSocket serverSocket = new ServerSocket(33333);
@@ -23,9 +24,5 @@ public class Server {
 
     }
 
-    void main() {
-
-
-
-    }
+    void main() {}
 }
