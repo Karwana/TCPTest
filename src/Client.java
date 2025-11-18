@@ -6,10 +6,10 @@ import java.net.Socket;
 
 public class Client {
 
-    int port = 333333;
+    int port = 33333;
     public Client() throws IOException {
 
-        Socket socket = new Socket("127.0.0.1", 333333);
+        Socket socket = new Socket("127.0.0.1", 33333);
         PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
         BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 
@@ -17,7 +17,8 @@ public class Client {
 
         while ((temp = in.readLine()) != null) {
             out.println(temp);
+            System.out.println("sent message: " + temp);
         }
-
     }
+    void main() {}
 }

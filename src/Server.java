@@ -6,13 +6,21 @@ import java.net.Socket;
 
 public class Server {
 
-    int port = 333333;
+    int port = 33333;
     public Server() throws IOException {
 
-        ServerSocket serverSocket = new ServerSocket(333333);
+        ServerSocket serverSocket = new ServerSocket(33333);
         // lyssna på klienter
         Socket socket = serverSocket.accept();
         BufferedReader br = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+
+
+        String temp;
+        while ((temp = br.readLine()) != null) {
+            System.out.println("message from client: " + temp);
+        }
+
+
     }
 
     void main() {
