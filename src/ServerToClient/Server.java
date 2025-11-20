@@ -10,7 +10,7 @@ public class Server {
 
     public Server() throws IOException, InterruptedException {
 
-        ServerSocket serverSocket = new ServerSocket(33333);
+        ServerSocket serverSocket = new ServerSocket(port);
         // skicka till klient
         Socket socket = serverSocket.accept();
         PrintWriter out = new PrintWriter(socket.getOutputStream(), true);

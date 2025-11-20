@@ -12,7 +12,7 @@ public class Client {
 
     public Client() throws IOException {
 
-        Socket socket = new Socket("127.0.0.1", 33333);
+        Socket socket = new Socket("127.0.0.1", port);
         PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
         BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 

@@ -12,7 +12,7 @@ public class Server {
 
     public Server() throws IOException {
 
-        ServerSocket serverSocket = new ServerSocket(33333);
+        ServerSocket serverSocket = new ServerSocket(port);
         // lyssna på klienter
         Socket socket = serverSocket.accept();
         BufferedReader br = new BufferedReader(new InputStreamReader(socket.getInputStream()));
